@@ -3,8 +3,8 @@ body{
 }
 .content1 {
     width: 80vw;
-    height: 100vh;
-    position: fixed;
+    
+    position: relative;
     background-color: #FFE400;
     margin-top: 2%;
     margin-bottom: 4%;
@@ -29,4 +29,13 @@ img{
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
+}
+.bool{
+    display: flex;
+    justify-content: center;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
