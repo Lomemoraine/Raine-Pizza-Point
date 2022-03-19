@@ -3,7 +3,7 @@ body{
 }
 .content1 {
     width: 80vw;
-    height: 80vh;
+    height: 100vh;
     position: fixed;
     background-color: #FFE400;
     margin-top: 2%;
@@ -20,4 +20,13 @@ h1{
     font-weight: bold;
     color: #FF1700;
     font-size: large;
+}
+.whatWeDo{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
 }
