@@ -25,14 +25,14 @@
             <!-- boostrap class to make navbar items move to the center -->
             <div class="collapse navbar-collapse d-flex justify-content-md-center" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link active">Contact Us</a>
-                    <a href="#" class="nav-item nav-link active">Order</a>
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#contact" class="nav-item nav-link active">Contact Us</a>
+                    <a href="#home" class="nav-item nav-link active">Order</a>
                 </div>
             </div>
     
     </nav>
-    <div class="container-fluid content1">
+    <div class="container-fluid content1" id="home">
         <h1 style="text-align: center;">Raine Pizza Point</h1>
         <p style="text-align: center;">Our heart is made of pizza, and our mission is to share our funny pizza quote love with everyone.<br> Care for a slice?</p>
         <div class="container-fluid">
@@ -105,23 +105,65 @@
           </tr>
         </tbody>
         </table>
-  </div>
-  </div>
-          <!-- 
-        <div>
-          
-      </div>
-          -->
-         
-        <!--A table and a button to put more orders-->
+        <div class="adding-order text-center">
+          <button type="submit" class="btn btn-success" id="addOrder">Add Order</button><br>
+          <div class="total-amount" >
+            <p id="para1">Your Total amount is: </p>
+            <p id="para2">Would you want your order delivered at a cost around Village Market?</p>
+
+            <div class="bool">
+            <button type="submit" class="btn btn-success" id="yes">YES</button>
+            <div class="divider"></div>
+            <button type="submit" class="btn btn-success" id="no">NO</button><br>
+          </div>
+            <div class="location">
+              <input type="text" size="30" placeholder="Where would you like your order delivered?" required />
+              <button class="btn btn-success finish" type="submit">Finish</button>
+            </div>
+            
+       
+          <br>
+          <div class="checkout">
+            <button type="submit" class="btn btn-success" id="no">Checkout</button><br>
+            <p id="deliveryLocation"></p>
+            <p>This is your order summary</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Pizza size</th>
+                  <th scope="col">Pizza Topping</th>
+                  <th scope="col">Pizza Crust</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Delivery Fee</th>
+                  
+
+                </tr>
+              </thead>
+              <tbody id="summary">
+                <tr>
+                  <th scope="row">1</th>
+                  <td id="pizzaSize"></td>
+                  <td id="pizzaTopping"></td>
+                  <td id="PizzaCrust"></td>
+                  <td id="total"></td>
+                  <td id="delivered"></td>
+                  
+                </tr>
+              </tbody>
+              </table>
+            <p>Your total amount payable is: </p>
+          </div>
         </div>
-        <!-- <div class="container contact text-center" >
-          <h5 style="font-size: small;">Raine Pizza Point</h5>
-          <p style="font-size: small;">Muthaiga,Village market Mall<br>Kiambu,00100-Village Market</p>
-          <p>Tel: +254 748 177 004</p>
-        </div> -->
       </div>
-   
+  </div>
+  <div class="container contact text-center" id="contact">
+    <h5 style="font-size: small;">Raine Pizza Point</h5>
+    <p style="font-size: small;">Muthaiga,Village market Mall<br>Kiambu,00100-Village Market</p>
+    <p>Tel: +254 748 177 004</p>
+  </div>
+  </div>
+        
       
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
