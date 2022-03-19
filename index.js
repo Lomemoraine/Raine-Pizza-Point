@@ -10,7 +10,7 @@ $(document).ready(function(){
   $(".finalSummary").hide();
 
 $("button#placeOrder").click(function(){
-    let size = $('#pizzaSize').find('option:selected').val();
+    let size = $('#pizzaSizeSelect').find('option:selected').val();
     let topping = $('#topping').find('option:selected').val();
     let crust = $('#crust').find('option:selected').val();
     let serial = 1;
@@ -23,6 +23,10 @@ $("button#placeOrder").click(function(){
     $("#tableOrder").show();
     $("button#addOrder").show();
     $("button#checkout").show();
+    $("#pizzaSize").html($('#pizzaSizeSelect').find('option:selected').text() +"  "+size);
+    $("#pizzaTopping").html($('#topping').find('option:selected').text() +"  "+topping);
+    $("#PizzaCrust").html($('#crust').find('option:selected').text() +"  "+crust);
+    $("#total").html(total)
 
 
 })
