@@ -42,7 +42,7 @@
               <img class ="image-fluid"src="images/size.jpg" alt=""/>
               <p style="text-align: center;"><b>Pizza size</b></p>
               <select class="form-control" id="pizzaSizeSelect">
-                <option value="" disabled selected>Choose Size</option>
+                <!-- <option value="" disabled selected>Choose Size</option> -->
                 <option label="Small(@ Ksh.500)" value="500">Small</option>
                 <option label="Medium(@ Ksh.700)" value="700">Medium</option>
                 <option label="Large(@ Ksh.1000)" value="1000">Large</option>
@@ -57,7 +57,7 @@
               <img  class ="image-fluid"src="images/pizza_toppings.jpg" alt=""/>
               <p style="text-align: center "><b>Pizza Toppings</b></p>
               <select class="form-control" id="topping">
-                <option value="" disabled selected>Choose toppings</option>></option>
+                <!-- <option value="" disabled selected>Choose toppings</option>></option> -->
                 <option label="Pepperoni(@ Ksh.100)" value="100">Pepperoni</option>
                 <option label="Mushroom(@ Ksh.50)" value="50">Mushroom</option>
                 <option label="Sausage(@ Ksh.150)" value="150">Sausage</option>
@@ -72,7 +72,7 @@
              <img class ="image-fluid"src="images/crust.jpeg" alt=""/>
              <p style="text-align: center"><b>Pizza Crust</b></p>
              <select class="form-control" id="crust" method="post">
-              <option value="" disabled selected>Choose crust</option>></option>
+              <!-- <option value="" disabled selected>Choose crust</option>></option> -->
               <option label="crispy(@ Ksh.100)" value="100">Crispy</option>
               <option label="stuffed(@ Ksh.50)" value="50">Stuffed</option>
               <option label="Glutten-free(@ Ksh.100)" value="150">Glutten-free</option>
@@ -107,7 +107,10 @@
         </tbody>
         </table>
         <div class="adding-order text-center">
-          <button type="submit" class="btn btn-success" id="addOrder">Add Order</button><br>
+          <button type="submit" class="btn btn-success" id="addOrder">Add Order</button>
+          <div class="divider"></div>
+          <button type="submit" class="btn btn-success" id="clear">Clear</button><br>
+          
           <div class="total-amount" >
             <p id="para1">Your Total amount is:<span id="ttotal"></span> </p>
             <p id="para3">We have received your order.It will be delivered to <span id="deliveryLocation"></span></p>
