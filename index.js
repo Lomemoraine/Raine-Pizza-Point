@@ -23,12 +23,11 @@ $("button#placeOrder").click(function(){
     $("#tableOrder").show();
     $("button#addOrder").show();
     $("button#checkout").show();
-    $("#pizzaSize").html($('#pizzaSizeSelect').find('option:selected').text() +"  "+size);
-    $("#pizzaTopping").html($('#topping').find('option:selected').text() +"  "+topping);
-    $("#PizzaCrust").html($('#crust').find('option:selected').text() +"  "+crust);
+    // Place items in the table
+    $("#pizzaSize").html($('#pizzaSizeSelect').find(':selected').text() +" -> "+size);
+    $("#pizzaTopping").html($('#topping').find(':selected').text() +" -> "+topping);
+    $("#PizzaCrust").html($('#crust').find(':selected').text() +" -> "+crust);
     $("#total").html(total)
-
-
 })
 
 })
