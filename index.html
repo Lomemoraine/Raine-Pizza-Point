@@ -18,7 +18,7 @@
   <body>
       
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       
+            <div class="container">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,7 +30,7 @@
                     <a href="#home" class="nav-item nav-link active">Order</a>
                 </div>
             </div>
-    
+          </div>
     </nav>
     <div class="container-fluid content1" id="home">
         <h1 style="text-align: center;">Raine Pizza Point</h1>
@@ -41,27 +41,28 @@
             <div class="d-flex flex-column align-items-center">
               <img class ="image-fluid"src="images/size.jpg" alt=""/>
               <p style="text-align: center;"><b>Pizza size</b></p>
-              <select class="form-control">
+              <select class="form-control" id="pizzaSizeSelect">
                 <option value="" disabled selected>Choose Size</option>
-                <option label="Small" value="500">Small</option>
-                <option label="Medium" value="700">Medium</option>
-                <option label="Large" value="1000">Large</option>
+                <option label="Small(@ Ksh.500)" value="500">Small</option>
+                <option label="Medium(@ Ksh.700)" value="700">Medium</option>
+                <option label="Large(@ Ksh.1000)" value="1000">Large</option>
               </select>
 
              
           </div>
         </div>
+        <!--inputs have predefined values as the prices-->
         <div class="col-md-4 col-sm-12">
             <div class="d-flex flex-column align-items-center">
               <img  class ="image-fluid"src="images/pizza_toppings.jpg" alt=""/>
               <p style="text-align: center "><b>Pizza Toppings</b></p>
-              <select class="form-control">
+              <select class="form-control" id="topping">
                 <option value="" disabled selected>Choose toppings</option>></option>
-                <option label="Pepperoni" value="100">Small</option>
-                <option label="Mushroom" value="50">Medium</option>
-                <option label="Sausage" value="150">Large</option>
-                <option label="Extra Cheese" value="150">Large</option>
-                <option label="Black Olives" value="200">Large</option>
+                <option label="Pepperoni(@ Ksh.100)" value="100">Pepperoni</option>
+                <option label="Mushroom(@ Ksh.50)" value="50">Mushroom</option>
+                <option label="Sausage(@ Ksh.150)" value="150">Sausage</option>
+                <option label="Extra Cheese(@ Ksh.150)" value="150">Extra Cheese</option>
+                <option label="Black Olives(@ Ksh.200)" value="200">Black OLives</option>
               </select>
              
           </div>
@@ -70,11 +71,11 @@
           <div class="d-flex flex-column align-items-center">
              <img class ="image-fluid"src="images/crust.jpeg" alt=""/>
              <p style="text-align: center"><b>Pizza Crust</b></p>
-             <select class="form-control">
+             <select class="form-control" id="crust" method="post">
               <option value="" disabled selected>Choose crust</option>></option>
-              <option label="crispy" value="100">Small</option>
-              <option label="stuffed" value="50">Medium</option>
-              <option label="Glutten-free" value="150">Large</option>
+              <option label="crispy(@ Ksh.100)" value="100">Crispy</option>
+              <option label="stuffed(@ Ksh.50)" value="50">Stuffed</option>
+              <option label="Glutten-free(@ Ksh.100)" value="150">Glutten-free</option>
               </select>
             </div>
           </div>
@@ -83,9 +84,9 @@
       <br>
     <div class="button-table">
       <div class="text-center">
-        <button type="submit" class="btn btn-success">Place Order</button>
+        <button type="submit" class="btn btn-success" id="placeOrder">Place Order</button>
       </div><br>
-      <table class="table table-dark">
+      <table class="table table-dark" id="tableOrder">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -108,7 +109,8 @@
         <div class="adding-order text-center">
           <button type="submit" class="btn btn-success" id="addOrder">Add Order</button><br>
           <div class="total-amount" >
-            <p id="para1">Your Total amount is: </p>
+            <p id="para1">Your Total amount is:<span id="ttotal"></span> </p>
+            <p id="para3">We have received your order.It will be delivered to <span id="deliveryLocation"></span></p>
             <p id="para2">Would you want your order delivered at a cost around Village Market?</p>
 
             <div class="bool">
@@ -116,51 +118,24 @@
             <div class="divider"></div>
             <button type="submit" class="btn btn-success" id="no">NO</button><br>
           </div>
-            <div class="location">
-              <input type="text" size="30" placeholder="Where would you like your order delivered?" required />
-              <button class="btn btn-success finish" type="submit">Finish</button>
-            </div>
+          <div class="location">
+            <input type="text" size="30" id="locate" placeholder="Where would you like your order delivered?" required />
+            <button class="btn btn-success finish" type="submit" id="finish">Finish</button>
+          </div>
             
        
           <br>
           <div class="checkout">
-            <button type="submit" class="btn btn-success" id="no">Checkout</button><br>
-            <p id="deliveryLocation"></p>
-            <p>This is your order summary</p>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Pizza size</th>
-                  <th scope="col">Pizza Topping</th>
-                  <th scope="col">Pizza Crust</th>
-                  <th scope="col">Total</th>
-                  <th scope="col">Delivery Fee</th>
-                  
-
-                </tr>
-              </thead>
-              <tbody id="summary">
-                <tr>
-                  <th scope="row">1</th>
-                  <td id="pizzaSize"></td>
-                  <td id="pizzaTopping"></td>
-                  <td id="PizzaCrust"></td>
-                  <td id="total"></td>
-                  <td id="delivered"></td>
-                  
-                </tr>
-              </tbody>
-              </table>
-            <p>Your total amount payable is: </p>
+            <button type="submit" class="btn btn-success" id="checkout">Checkout</button><br>
+          
           </div>
         </div>
       </div>
   </div>
   <div class="container contact text-center" id="contact">
     <h5 style="font-size: small;">Raine Pizza Point</h5>
-    <p style="font-size: small;">Muthaiga,Village market Mall<br>Kiambu,00100-Village Market</p>
-    <p>Tel: +254 748 177 004</p>
+    <p  class="foot" style="font-size: small;">Muthaiga,Village market Mall<br>Kiambu,00100-Village Market</p>
+    <p  class="foot">Tel: +254 748 177 004</p>
   </div>
   </div>
         
