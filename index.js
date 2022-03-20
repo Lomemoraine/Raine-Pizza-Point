@@ -59,9 +59,16 @@ $("button#placeOrder").click(function(){
     $("#pizza").append(newRow);
 });
 
-//    var newRow = '<tr><th scope="row">' + newPizza.serial+ '</th><td id="pizzaSize">' + $('#pizzaSizeSelect').find(':selected').text()  + " -> " + newPizza.size + '</td><td id="pizzaTopping">' + $('#topping').find(':selected').text() + " -> " + newPizza.topping + '</td><td id="PizzaCrust">' + $('#crust').find(':selected').text() + " -> " + newPizza.crust + '</td><td id="total">' + newPizza.total + '</td></tr>'
+ $("button#checkout").click(function(){
+    $("button#addOrder").hide(); 
+    $("p#para1").show();
+    $("p#para2").show();
+    $(".bool").show();
+    totalPayable = totalPayable +total;
+    $("#ttotal").html(' '+totalPayable)
 
-//    $("#pizza").append(newRow);
+
+ })
 })
 
 })
