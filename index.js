@@ -3,6 +3,7 @@ $(document).ready(function(){
   $("button#addOrder").hide();
   $("p#para1").hide();
   $("p#para2").hide();
+  $("p#para3").hide();
   $(".bool").hide();
   $(".location").hide();
   $("button#checkout").hide();
@@ -10,6 +11,7 @@ $(document).ready(function(){
   $(".finalSummary").hide();
   let serial = 1;
   let totalPayable=0;
+  let locationn ="";
   
 $("button#placeOrder").click(function(){
     // declare local variables to hold values from the input
@@ -29,6 +31,7 @@ $("button#placeOrder").click(function(){
     $("#tableOrder").show();
     $("button#addOrder").show();
     $("button#checkout").show();
+    $("p#para3").hide();
     // Place items in the table
     $("#pizzaSize").html($('#pizzaSizeSelect').find(':selected').text() +" -> "+size);
     $("#pizzaTopping").html($('#topping').find(':selected').text() +" -> "+topping);
@@ -68,6 +71,8 @@ $("button#placeOrder").click(function(){
     $("p#para1").show();
     $("p#para2").show();
     $(".bool").show();
+    $("p#para3").hide();
+    $("button#checkout").hide()
     totalPayable = totalPayable +total;
     $("#ttotal").html(' '+totalPayable)
 
@@ -79,22 +84,26 @@ $("button#placeOrder").click(function(){
      $(".location").show();
      $(".bool").hide();
      $("p#para2").hide();
-     
+     $("p#para3").hide();
      totalPayable = totalPayable + deliveryFee
-     $("#ttotal").html(' '+totalPayable);
-     
-     
-    $("button#finish").click(function(){
+     $("#ttotal").html(' '+totalPayable); 
+    });   
+     $("button#finish").click(function(){
         $(".location").hide(); 
-        ("p#para1").hide();
-        let locationn =  $("input#finish").val();
+        $("p#para1").show();
+        $("p#para3").show();
+        locationn =  $("input#locate").val();
+        console.log(locationn);
         $("p#deliveredTotal").show()
         $("span#finalAmount").html(locationn)
+        $("#tableSummary").show();
+        $("p#para3").append(' '+locationn);
+      
 
-    })
+    });
 
 
- })
+ 
 
 })
 
