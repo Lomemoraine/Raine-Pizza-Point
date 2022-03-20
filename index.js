@@ -23,6 +23,7 @@ $("button#placeOrder").click(function(){
     console.log(topping);
     console.log(crust);
     console.log(total);
+    $("button#placeOrder").hide();
     $("#tableOrder").show();
     $("button#addOrder").show();
     $("button#checkout").show();
@@ -31,6 +32,7 @@ $("button#placeOrder").click(function(){
     $("#pizzaTopping").html($('#topping').find(':selected').text() +" -> "+topping);
     $("#PizzaCrust").html($('#crust').find(':selected').text() +" -> "+crust);
     $("#total").html(total)
+   
     // constructor for pizza
     function pizza(size,topping,crust,total,serialNo){
         this.size =size,
@@ -69,6 +71,7 @@ $("button#placeOrder").click(function(){
 
 
  })
+
 })
 
 })
