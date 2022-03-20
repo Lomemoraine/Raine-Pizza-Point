@@ -70,6 +70,10 @@ $("button#placeOrder").click(function(){
     $("#ttotal").html(' '+totalPayable)
 
 
+ });
+ $("button#yes").click(function(){
+     alert("The delivery charge around village market is 150");
+     
  })
 
 })
