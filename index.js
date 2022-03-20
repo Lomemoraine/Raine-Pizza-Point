@@ -10,6 +10,7 @@ $(document).ready(function(){
   $(".finalSummary").hide();
   let serial = 1;
   let totalPayable=0;
+  
 $("button#placeOrder").click(function(){
     // declare local variables to hold values from the input
     let size = $('#pizzaSizeSelect').find('option:selected').val();
@@ -17,6 +18,7 @@ $("button#placeOrder").click(function(){
     let crust = $('#crust').find('option:selected').val();
     serial = 1;
     totalPayable = 0;
+    let deliveryFee = 150;
     let total = parseInt(size) + parseInt(topping) + parseInt(crust);
    
     console.log(size);
@@ -72,8 +74,26 @@ $("button#placeOrder").click(function(){
 
  });
  $("button#yes").click(function(){
+    
      alert("The delivery charge around village market is 150");
+     $(".location").show();
+     $(".bool").hide();
+     $("p#para2").hide();
      
+     totalPayable = totalPayable + deliveryFee
+     $("#ttotal").html(' '+totalPayable);
+     
+     
+    $("button#finish").click(function(){
+        $(".location").hide(); 
+        ("p#para1").hide();
+        let locationn =  $("input#finish").val();
+        $("p#deliveredTotal").show()
+        $("span#finalAmount").html(locationn)
+
+    })
+
+
  })
 
 })
