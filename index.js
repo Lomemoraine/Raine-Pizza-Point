@@ -87,7 +87,15 @@ $("button#placeOrder").click(function(){
      $("p#para3").hide();
      totalPayable = totalPayable + deliveryFee
      $("#ttotal").html(' '+totalPayable); 
-    });   
+    });  
+    $("button#no").click(function(){
+    $(".location").hide();
+    $(".bool").hide();
+    $("p#para2").hide();
+    $("p#para3").hide();
+    $("#tableSummary").show();
+    $("#ttotal").html(' '+totalPayable)
+    }) 
      $("button#finish").click(function(){
         $(".location").hide(); 
         $("p#para1").show();
