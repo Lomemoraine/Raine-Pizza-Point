@@ -15,7 +15,7 @@ $(document).ready(function(){
   let locationn ="";
   
 $("button#placeOrder").click(function(){
-    // declare local variables to hold values from the input
+    // declare local  and use  the global variables to hold values from the input
     let size = $('#pizzaSizeSelect').find('option:selected').val();
     let topping = $('#topping').find('option:selected').val();
     let crust = $('#crust').find('option:selected').val();
