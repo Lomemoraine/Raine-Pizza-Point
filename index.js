@@ -67,9 +67,9 @@ $("button#placeOrder").click(function(){
     var newRow = '<tr><th scope="row">' + pizza2.serialNo+ '</th><td id="pizzaSize">' + $('#pizzaSizeSelect').find(':selected').text()  + " -> " + pizza2.size + '</td><td id="pizzaTopping">' + $('#topping').find(':selected').text() + " -> " + pizza2.topping + '</td><td id="PizzaCrust">' + $('#crust').find(':selected').text() + " -> " + pizza2.crust + '</td><td id="total">' + pizza2.total + '</td></tr>'
     $("#pizza").append(newRow);
 });
-$("button#clear").click(function(){
-    $("#pizza").remove();
-})
+// $("button#clear").click(function(){
+//     $("#tableOrder").remove();
+// })
 
  $("button#checkout").click(function(){
     $("button#addOrder").hide(); 
