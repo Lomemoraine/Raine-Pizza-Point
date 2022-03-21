@@ -19,7 +19,7 @@
 * User sees the total amount they should pay (with an extra cost for delivered ones).
 ### The live link
 * The demonstration of the project's live deployment is available in the link below:
-[https://lomemoraine.github.io/Delani-StudioIP/](https://lomemoraine.github.io/Delani-StudioIP/)
+[https://lomemoraine.github.io/Raine-Pizza-Point//](https://lomemoraine.github.io/Raine-Pizza-Point//)
 ## Project Setup Instructions
 * Have a computer in a good working  condition that has a code editor installed preferably atom or Vs Code
 * Have a stable internet connection to enable continuous adding and commiting HTML and CSS changes into the project's repository. 
