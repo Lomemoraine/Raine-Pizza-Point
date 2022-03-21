@@ -6,7 +6,7 @@ $(document).ready(function(){
   $("p#para3").hide();
   $(".bool").hide();
   $(".location").hide();
-  $("button#clear").hide();
+//   $("button#clear").hide();
   $("button#checkout").hide();
   $("#tableSummary").hide();
   $(".finalSummary").hide();
@@ -29,7 +29,7 @@ $("button#placeOrder").click(function(){
     console.log(crust);
     console.log(total);
     $("button#placeOrder").hide();
-    $("button#clear").show();
+    // $("button#clear").show();
     $("#tableOrder").show();
     $("button#addOrder").show();
     $("button#checkout").show();
